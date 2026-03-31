@@ -2,39 +2,75 @@
   "lastUpdated": "31 Mar 2026",
   "matches": [
     { "id": 0, "label": "Match 1", "teams": "RCB vs SRH", "date": "28 Mar", "done": true },
-    { "id": 1, "label": "Match 2", "teams": "KKR vs MI",  "date": "29 Mar", "done": true },
+    { "id": 1, "label": "Match 2", "teams": "MI vs KKR",  "date": "29 Mar", "done": true },
     { "id": 2, "label": "Match 3", "teams": "RR vs CSK",  "date": "30 Mar", "done": true },
     { "id": 3, "label": "Match 4", "teams": "PBKS vs GT", "date": "31 Mar", "done": false },
-    { "id": 4, "label": "Match 5", "teams": "LSG vs DC",  "date": "1 Apr",  "done": false }
+    { "id": 4, "label": "Match 5", "teams": "DC vs LSG",  "date": "1 Apr",  "done": false }
   ],
   "players": {
-    "Sanju Samson":         { "m0": null, "m1": null, "m2": { "runs": 6, "balls": 8, "lineup": true } },
-    "Ishan Kishan":         { "m0": { "runs": 80, "balls": 38, "fours": 8, "sixes": 5, "stumpings": 1, "lineup": true } },
-    "Virat Kohli":          { "m0": { "runs": 69, "balls": 38, "fours": 5, "sixes": 5, "catches": 1, "lineup": true } },
-    "Rohit Sharma":         { "m0": null, "m1": { "runs": 78, "balls": 38, "fours": 6, "sixes": 6, "lineup": true } },
-    "Vaibhav Sooryavanshi": { "m0": null, "m1": null, "m2": { "runs": 52, "balls": 17, "fours": 4, "sixes": 5, "lineup": true } },
-    "Philip Salt":          { "m0": { "runs": 8, "balls": 5, "fours": 1, "catches": 2, "lineup": true } },
-    "Ajinkya Rahane":       { "m0": null, "m1": { "runs": 67, "balls": 40, "fours": 3, "sixes": 5, "lineup": true } },
-    "Heinrich Klaasen":     { "m0": { "runs": 31, "balls": 22, "fours": 3, "sixes": 1, "catches": 1, "lineup": true } },
-    "Jasprit Bumrah":       { "m0": null, "m1": { "wickets": 0, "overs": 4, "runs_conceded": 35, "dots": 10, "lineup": true } },
-    "Sunil Narine":         { "m0": null, "m1": { "wickets": 1, "overs": 4, "runs_conceded": 30, "dots": 8, "lineup": true } },
-    "Hardik Pandya":        { "m0": null, "m1": { "runs": 18, "balls": 11, "wickets": 1, "runs_conceded": 27, "lineup": true } },
-    "Ravindra Jadeja":      { "m0": null, "m1": null, "m2": { "wickets": 2, "overs": 4, "runs_conceded": 18, "blbw": 1, "dots": 14, "catches": 1, "lineup": true } },
-    "Devdutt Padikkal":     { "m0": { "runs": 61, "balls": 26, "fours": 7, "sixes": 4, "catches": 2, "lineup": true, "impact": true } },
-    "Finn Allen":           { "m0": null, "m1": { "runs": 37, "balls": 17, "fours": 3, "sixes": 2, "lineup": true } },
-    "Rinku Singh":          { "m0": null, "m1": { "runs": 33, "balls": 21, "fours": 1, "sixes": 2, "lineup": true } },
-    "Bhuvneshwar Kumar":    { "m0": { "wickets": 1, "overs": 3, "runs_conceded": 26, "blbw": 1, "dots": 9, "lineup": true } },
-    "Suryakumar Yadav":     { "m0": null, "m1": { "runs": 16, "balls": 8, "catches": 1, "lineup": true, "impact": true } },
-    "Yashasvi Jaiswal":     { "m0": null, "m1": null, "m2": { "runs": 18, "balls": 22, "fours": 2, "catches": 1, "lineup": true } },
-    "Cameron Green":        { "m0": null, "m1": { "runs": 18, "balls": 10, "fours": 1, "sixes": 1, "lineup": true } },
-    "Abhishek Sharma":      { "m0": { "runs": 13, "balls": 8, "fours": 1, "lineup": true } },
-    "Shivam Dube":          { "m0": null, "m1": null, "m2": { "runs": 6, "balls": 4, "sixes": 1, "lineup": true } },
-    "Riyan Parag":          { "m0": null, "m1": null, "m2": { "runs": 8, "balls": 7, "fours": 1, "lineup": true } },
-    "Trent Boult":          { "m0": null, "m1": { "wickets": 0, "overs": 4, "runs_conceded": 47, "dots": 7, "lineup": true } },
-    "Ayush Mhatre":         { "m0": null, "m1": null, "m2": { "duck": true, "lineup": true } },
-    "Tilak Varma":          { "m0": null, "m1": { "runs": 20, "balls": 14, "fours": 1, "catches": 1, "lineup": true } },
-    "Ruturaj Gaikwad":      { "m0": null, "m1": null, "m2": { "runs": 6, "balls": 11, "fours": 1, "lineup": true } },
-    "Rajat Patidar":        { "m0": { "runs": 31, "balls": 12, "fours": 3, "sixes": 1, "lineup": true } },
-    "Travis Head":          { "m0": { "runs": 5, "balls": 4, "fours": 1, "lineup": true } }
+
+    "Varun Chakaravarthy": { "m0": null, "m1": 18, "m2": null, "m3": null, "m4": null },
+    "Sunil Narine": { "m0": null, "m1": 37, "m2": null, "m3": null, "m4": null },
+    "Hardik Pandya": { "m0": null, "m1": 92, "m2": null, "m3": null, "m4": null },
+    "Finn Allen": { "m0": null, "m1": 93, "m2": null, "m3": null, "m4": null },
+    "Vaibhav Arora": { "m0": null, "m1": 33, "m2": null, "m3": null, "m4": null },
+
+    "Bhuvneshwar Kumar": { "m0": 43, "m1": null, "m2": null, "m3": null, "m4": null },
+    "Ishan Kishan": { "m0": 164, "m1": null, "m2": null, "m3": null, "m4": null },
+    "Rohit Sharma": { "m0": null, "m1": 150, "m2": null, "m3": null, "m4": null },
+
+    "Jofra Archer": { "m0": null, "m1": null, "m2": 111, "m3": null, "m4": null },
+    "Shivam Dube": { "m0": null, "m1": null, "m2": 16, "m3": null, "m4": null },
+    "Ajinkya Rahane": { "m0": null, "m1": 121, "m2": null, "m3": null, "m4": null },
+
+    "Abhishek Sharma": { "m0": 13, "m1": null, "m2": null, "m3": null, "m4": null },
+    "Yashasvi Jaiswal": { "m0": null, "m1": null, "m2": 64, "m3": null, "m4": null },
+
+    "Nitish Kumar Reddy": { "m0": 14, "m1": null, "m2": null, "m3": null, "m4": null },
+    "Angkrish Raghuvanshi": { "m0": null, "m1": 107, "m2": null, "m3": null, "m4": null },
+
+    "Harshal Patel": { "m0": -3, "m1": null, "m2": null, "m3": null, "m4": null },
+
+    "Rinku Singh": { "m0": null, "m1": 49, "m2": null, "m3": null, "m4": null },
+
+    "Ruturaj Gaikwad": { "m0": null, "m1": null, "m2": 10, "m3": null, "m4": null },
+
+    "Tim David": { "m0": 34, "m1": null, "m2": null, "m3": null, "m4": null },
+    "Dhruv Jurel": { "m0": null, "m1": null, "m2": 50, "m3": null, "m4": null },
+
+    "Harsh Dubey": { "m0": 57, "m1": null, "m2": null, "m3": null, "m4": null },
+    "Riyan Parag": { "m0": null, "m1": null, "m2": 26, "m3": null, "m4": null },
+
+    "Ravindra Jadeja": { "m0": null, "m1": null, "m2": 104, "m3": null, "m4": null },
+
+    "Virat Kohli": { "m0": 139, "m1": null, "m2": null, "m3": null, "m4": null },
+
+    "Suryakumar Yadav": { "m0": null, "m1": 32, "m2": null, "m3": null, "m4": null },
+
+    "Ryan Rickelton": { "m0": null, "m1": 167, "m2": null, "m3": null, "m4": null },
+
+    "Ayush Mhatre": { "m0": null, "m1": null, "m2": -2, "m3": null, "m4": null },
+
+    "Romario Shepherd": { "m0": 95, "m1": null, "m2": null, "m3": null, "m4": null },
+
+    "Philip Salt": { "m0": 32, "m1": null, "m2": null, "m3": null, "m4": null },
+
+    "Ravi Bishnoi": { "m0": null, "m1": null, "m2": 57, "m3": null, "m4": null },
+    "Noor Ahmad": { "m0": null, "m1": null, "m2": 9, "m3": null, "m4": null },
+    "Matt Henry": { "m0": null, "m1": null, "m2": 5, "m3": null, "m4": null },
+
+    "Devdutt Padikkal": { "m0": 161, "m1": null, "m2": null, "m3": null, "m4": null },
+
+    "Vaibhav Sooryavanshi": { "m0": null, "m1": null, "m2": 126, "m3": null, "m4": null },
+
+    "Shimron Hetmyer": { "m0": null, "m1": null, "m2": 6, "m3": null, "m4": null },
+
+    "Travis Head": { "m0": 17, "m1": null, "m2": null, "m3": null, "m4": null },
+
+    "Jitesh Sharma": { "m0": 6, "m1": null, "m2": null, "m3": null, "m4": null },
+
+    "Trent Boult": { "m0": null, "m1": 18, "m2": null, "m3": null, "m4": null },
+
+    "Tilak Varma": { "m0": null, "m1": 36, "m2": null, "m3": null, "m4": null }
   }
 }
