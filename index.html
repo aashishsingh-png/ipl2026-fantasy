@@ -250,7 +250,7 @@
 // ══════════════════════════════════════════════════════════════════════════════
 // GOOGLE SHEETS CONFIGURATION - CS IPL GROUP A
 // ══════════════════════════════════════════════════════════════════════════════
-const SHEET_ID = '1Sc2BEoIPeEO6r6FJdH0E1hGeFD0_jGo1mcWABR-aBGg';
+const SHEET_ID = '1BQyrCNM7d9wEw5LNKIwm8ZXfNN3JhPR3rrUOlq3I8zs';
 const SHEET_GID = '0';
 
 // ── SQUADS ────────────────────────────────────────────────────────────────────
@@ -347,16 +347,23 @@ function parseSheetData(csvText) {
     lbwBowled: 18, maidenOver: 19, economy: 20, bonusPoints: 21, totalPoints: 22
   };
   
+  // CS IPL Group A squad names to filter
+  const csSquadNames = Object.keys(SQUADS);
+  
   const playerData = {};
   const matchSet = new Set();
   
   for (let i = 1; i < lines.length; i++) {
     const values = parseCSVLine(lines[i]);
     const playerName = values[cols.playerName];
+    const squadName = values[cols.squadName];
     const matchNo = values[cols.matchNo];
     const matchName = values[cols.matchName];
     
     if (!playerName || !matchNo || playerName.toLowerCase() === 'total') continue;
+    
+    // FILTER: Only include rows where squadName matches CS IPL squads
+    if (!squadName || !csSquadNames.includes(squadName)) continue;
     
     matchSet.add(JSON.stringify({ no: matchNo, name: matchName }));
     
@@ -397,7 +404,7 @@ function parseSheetData(csvText) {
       return aNum - bNum;
     });
   
-  console.log(`✅ Loaded ${Object.keys(playerData).length} players, ${matches.length} matches`);
+  console.log(`✅ Loaded ${Object.keys(playerData).length} CS IPL players, ${matches.length} matches`);
   
   return {
     lastUpdated: new Date().toLocaleString('en-IN', { 
