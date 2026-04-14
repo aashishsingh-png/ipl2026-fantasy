@@ -255,25 +255,25 @@ const SHEET_GID = '0';
 
 // ── SQUADS ────────────────────────────────────────────────────────────────────
 const SQUADS = {
-  "Thakur Titans": {
-    color:"#3b82f6", C:"Sanju Samson", VC:"Mitchell Marsh", owner:"Aashish",
-    players:["Axar Patel","Heinrich Klaasen","Jasprit Bumrah","Josh Hazlewood","Mitchell Marsh","Nicholas Pooran","Riyan Parag","Sanju Samson","Shivam Dube","Nehal Wadhera","Prashant Veer"]
-  },
-  "Dhurandhar": {
+  "Dhurandhar - Pradeep": {
     color:"#22c55e", C:"Ishan Kishan", VC:"Philip Salt", owner:"Pradeep",
     players:["Ajinkya Rahane","Cameron Green","Ishan Kishan","Philip Salt","Quinton de Kock","Ruturaj Gaikwad","Sunil Narine","Tilak Varma","Priyansh Arya","Trent Boult","Washington Sundar"]
   },
-  "Kasauli Tigers": {
-    color:"#f97316", C:"Virat Kohli", VC:"Hardik Pandya", owner:"Arun",
-    players:["Hardik Pandya","Jos Buttler","Mohammed Siraj","Pat Cummins","Rashid Khan","Shreyas Iyer","Virat Kohli","Yashasvi Jaiswal","Dewald Brevis","Prabhsimran Singh","Akshat Raghuwanshi"]
-  },
-  "J Squad": {
+  "J Squad - Kishan": {
     color:"#ec4899", C:"Vaibhav Sooryavanshi", VC:"Rishabh Pant", owner:"Kishan",
     players:["Arshdeep Singh","Bhuvneshwar Kumar","Kuldeep Yadav","Mitchell Starc","Rajat Patidar","Ravindra Jadeja","Rishabh Pant","Suryakumar Yadav","Travis Head","Vaibhav Sooryavanshi","Yuzvendra Chahal"]
   },
-  "Team Godlike": {
+  "Kasauli Tigers - Arun": {
+    color:"#f97316", C:"Virat Kohli", VC:"Hardik Pandya", owner:"Arun",
+    players:["Hardik Pandya","Jos Buttler","Mohammed Siraj","Pat Cummins","Rashid Khan","Shreyas Iyer","Virat Kohli","Yashasvi Jaiswal","Dewald Brevis","Prabhsimran Singh","Angkrish Raghuvanshi"]
+  },
+  "Team GodLike - Vishal": {
     color:"#a855f7", C:"KL Rahul", VC:"Rohit Sharma", owner:"Vishal",
     players:["Abhishek Sharma","Aiden Markram","KL Rahul","Marco Jansen","Rohit Sharma","Sai Sudharsan","Shubman Gill","Varun Chakaravarthy","Ayush Mhatre","Devdutt Padikkal","Finn Allen"]
+  },
+  "Thakur Titans (TT)": {
+    color:"#3b82f6", C:"Sanju Samson", VC:"Mitchell Marsh", owner:"Aashish",
+    players:["Axar Patel","Heinrich Klaasen","Jasprit Bumrah","Josh Hazlewood","Mitchell Marsh","Nicholas Pooran","Riyan Parag","Sanju Samson","Shivam Dube","Nehal Wadhera","Prashant Veer"]
   },
 };
 
@@ -347,23 +347,16 @@ function parseSheetData(csvText) {
     lbwBowled: 18, maidenOver: 19, economy: 20, bonusPoints: 21, totalPoints: 22
   };
   
-  // CS IPL Group A squad names to filter
-  const csSquadNames = Object.keys(SQUADS);
-  
   const playerData = {};
   const matchSet = new Set();
   
   for (let i = 1; i < lines.length; i++) {
     const values = parseCSVLine(lines[i]);
     const playerName = values[cols.playerName];
-    const squadName = values[cols.squadName];
     const matchNo = values[cols.matchNo];
     const matchName = values[cols.matchName];
     
     if (!playerName || !matchNo || playerName.toLowerCase() === 'total') continue;
-    
-    // FILTER: Only include rows where squadName matches CS IPL squads
-    if (!squadName || !csSquadNames.includes(squadName)) continue;
     
     matchSet.add(JSON.stringify({ no: matchNo, name: matchName }));
     
@@ -404,7 +397,7 @@ function parseSheetData(csvText) {
       return aNum - bNum;
     });
   
-  console.log(`✅ Loaded ${Object.keys(playerData).length} CS IPL players, ${matches.length} matches`);
+  console.log(`✅ Loaded ${Object.keys(playerData).length} players, ${matches.length} matches`);
   
   return {
     lastUpdated: new Date().toLocaleString('en-IN', { 
